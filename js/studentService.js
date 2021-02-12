@@ -86,4 +86,4 @@ function completeTask(id)
     localStorage.setItem("localTask", JSON.stringify(taskVal));
     getAll();
 }
-export {insert,getAll,deleteTask,editTask,completeTask}
+export {insert, getAll, deleteTask, editTask, completeTask}
