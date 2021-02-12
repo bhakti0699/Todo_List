@@ -1,5 +1,14 @@
 import {insert, getAll, deleteTask, editTask, completeTask} from './studentService.js';
-$("#task").on("keypress click",function(event)
+$('tbody').sortable();
+$("#task").on("input", function(){
+   var regexp = /[^a-zA-Z0-9]/g;
+   if($(this).val().match(regexp)){
+      $("#error_display").css("display","block");
+      $("#error_display").text("only allow the AlphaNumeric");
+      $(this).val( $(this).val().replace(regexp,'') );
+   }
+ });
+$("#task").on("keypress",function(event)
 {
    if(event.keyCode=='13')
    {
