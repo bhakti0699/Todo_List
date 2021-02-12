@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset='utf-8'/>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Todo List</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous">
+</script>
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <section class="todo-outer">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-sm-12 col-md-8">
+          <h1>Todo List</h1>
+          <div class="todo-inner">
+            <div class="form-row">
+              <div class="col-8 mr-sm-2">
+                <input type="text" class="form-control" placeholder="Enter your task" id="task" />
+                
+              </div>
+              <button type="button" class="btn btn-success mr-sm-2" id="addbtn">
+                Add Task
+              </button>
+              <button type="button" class="btn btn-success mr-sm-2" id="savetaskbtn" style="display: none;">
+                Save Task
+              </button>
+            </div>
+            <div class="to-do-output">
+              <table class="table table-striped mt-3 mb-0" id="addedtasklist">
+                
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type='module' src="js/controller.js"> 
+  </script>
+</body>
+
+</html>
