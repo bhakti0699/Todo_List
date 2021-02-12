@@ -24,7 +24,8 @@ function insert()
         getAll();
     }
     else{
-        alert("please Enter value")
+        $("#error_display").css("display","block");
+        $("#error_display").text("please enter value");
     }
 }
 function getAll()

@@ -1,8 +1,17 @@
 import {insert, getAll, deleteTask, editTask, completeTask} from './studentService.js';
-$("#addbtn").button().click(function(){
+$("#task").on("keypress click",function(event)
+{
+   if(event.keyCode=='13')
+   {
+      event.preventDefault();
+      insert();
+      $("input[id=task]").val('');
+   }
+});
+/*$("#addbtn").on("click",function(){
     insert();
     $("input[id=task]").val('');
- });
+ });*/
  $(document).on("click","#addedtasklist tbody tr td button.edit",function()
  {
     let id=$(this).attr('id');

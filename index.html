@@ -30,9 +30,10 @@ crossorigin="anonymous">
         <div>
           <h1>Todo List</h1>
           <div class="todo-inner">
-            <label class="col-7 mr-sm-2">hello</label>
+            <div class="alert alert-danger alert-dismissable fade-in" id="error_display" style="display: none;">a</div>
             <div class="form-row">
               <div class="col-8 mr-sm-2">
+                <form id="form">
                 <input type="text" class="form-control" placeholder="Enter your task" id="task" />
               </div>
               <button type="button" class="btn btn-success mr-sm-2" id="addbtn">
@@ -41,9 +42,10 @@ crossorigin="anonymous">
               <button type="button" class="btn btn-success mr-sm-2" id="savetaskbtn" style="display: none;">
                 Save Task
               </button>
+              </form>
             </div>
             <div class="to-do-output">
-              <table class="table table-responsive table-striped mt-3 mb-0" id="addedtasklist">
+              <table class="table table-responsive table-striped mt-3 mb-0 pagin-table" id="addedtasklist">
               </table>
             </div>
           </div>
