@@ -57,7 +57,7 @@ function editTask(id)
     let taskVal= JSON.parse(task);
     let index = taskVal.findIndex(item => item.id == id);  
     $("#task").val(taskVal[index]['task']);
-    $("#addbtn").css("display","none");
+   // $("#addbtn").css("display","none");
     $("#savetaskbtn").css("display","block");
     saveTask(taskVal,index);
 }
@@ -73,7 +73,7 @@ function saveTask(taskVal,index)
             }
         }
         $("#savetaskbtn").css("display","none");
-        $("#addbtn").css("display","block");
+     //   $("#addbtn").css("display","block");
         localStorage.setItem("localTask", JSON.stringify(taskVal));
         getAll();
     });
