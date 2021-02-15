@@ -78,4 +78,4 @@ function saveTask(taskVal,index)
         getAll();
     });
 }
-export {insert, getAll, deleteTask, editTask, completeTask}
+export {insert, getAll, deleteTask, editTask}

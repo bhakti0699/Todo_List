@@ -1,4 +1,4 @@
-import {insert, getAll, deleteTask, editTask, completeTask} from './studentService.js';
+import {insert, getAll, deleteTask, editTask} from './studentService.js';
 //$('.to-do-output table tbody tr').sortable();
 $(function() {
    $("#addedtasklist tbody" ).sortable();
