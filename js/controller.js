@@ -3,6 +3,27 @@ import {insert, getAll, deleteTask, editTask, completeTask} from './studentServi
 $(function() {
    $("#addedtasklist tbody" ).sortable();
 });
+
+$(document).on("change",".checked",function()
+{
+   if ($(this).prop('checked')) {
+      let id=$(this).attr('id');
+      let task = localStorage.getItem("localTask");
+      let taskVal= JSON.parse(task);
+      let index = taskVal.findIndex(item => item.id == id);
+      taskVal[index].status="true";
+      localStorage.setItem("localTask", JSON.stringify(taskVal));
+      getAll();
+  } else {
+   let id=$(this).attr('id');
+   let task = localStorage.getItem("localTask");
+   let taskVal= JSON.parse(task);
+   let index = taskVal.findIndex(item => item.id == id);
+   taskVal[index].status="false";
+   localStorage.setItem("localTask", JSON.stringify(taskVal));
+   getAll();
+  }
+})
 $('input[id=task]').focus();
 $("#task").on("input", function(){
    var regexp = /[^a-zA-Z0-9]/g;
@@ -34,10 +55,5 @@ $("#task").on("keypress",function(event)
  {
      let id=$(this).attr('id');
      deleteTask(id);
- });
- $(document).on("click","#addedtasklist tbody tr td button.check",function()
- {
-    let id=$(this).attr('id');
-    completeTask(id);
  });
  getAll();

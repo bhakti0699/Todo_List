@@ -78,13 +78,4 @@ function saveTask(taskVal,index)
         getAll();
     });
 }
-function completeTask(id)
-{
-    let task = localStorage.getItem("localTask");
-    let taskVal= JSON.parse(task);
-    let index = taskVal.findIndex(item => item.id == id);
-    taskVal[index].status="true";
-    localStorage.setItem("localTask", JSON.stringify(taskVal));
-    getAll();
-}
 export {insert, getAll, deleteTask, editTask, completeTask}
