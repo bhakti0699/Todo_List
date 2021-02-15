@@ -1,5 +1,9 @@
 import {insert, getAll, deleteTask, editTask, completeTask} from './studentService.js';
-$('tbody').sortable();
+//$('.to-do-output table tbody tr').sortable();
+$(function() {
+   $("#addedtasklist tbody" ).sortable();
+});
+$('input[id=task]').focus();
 $("#task").on("input", function(){
    var regexp = /[^a-zA-Z0-9]/g;
    if($(this).val().match(regexp)){
