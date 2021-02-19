@@ -23,21 +23,33 @@ section.todo-outer {
 }
 section.todo-outer h1 {
     font-size: 40px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .todo-inner {
-    width: auto;
-    height: auto;
+    width: 100%;
     float: left;
     padding: 40px;
     box-shadow: 0px 0px 10px #c1c1c1;
     background: #fff;
 }
 table tr td button {
-    
     background: no-repeat;
     border: none;
     padding: 0;
     cursor: pointer;
 }
 .completed{text-decoration: line-through;}
+
+.clearable{
+  background:url(http://i.imgur.com/z7ZSYjt.png) no-repeat right -10px center;
+  border:1px solid #999;
+  padding:3px 18px 3px 4px; /* USE the same right padding in jQ! */
+  border-radius:3px;
+  transition: background 0.4s;
+}
+.clearable.x{
+  background-position: right 5px center;
+}
+.clearable.onX{
+  cursor:pointer;
+}
