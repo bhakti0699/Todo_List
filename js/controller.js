@@ -1,16 +1,5 @@
 import {insert, getAll, deleteTask, editTask} from './studentService.js';
 
-function tog(v){return v?'addClass':'removeClass';} 
-  
-  $(document).on('input', '.clearable', function(){
-    $(this)[tog(this.value)]('x');
-  }).on('mousemove', '.x', function( e ){
-    $(this)[tog(this.offsetWidth-18 < e.clientX-this.getBoundingClientRect().left)]('onX');   
-  }).on('click', '.onX', function(){
-    $(this).removeClass('x onX').val('');
-  });
-  
-});
 //$('.to-do-output table tbody tr').sortable();
 $(function() {
    $("#addedtasklist tbody" ).sortable();
@@ -65,7 +54,11 @@ $("#task").on("keypress",function(event)
  });
  $(document).on("click","#addedtasklist tbody tr td button.trash",function()
  {
+    var result=confirm("Are you sure to delete?");
+    if(result==true)
+    {
      let id=$(this).attr('id');
      deleteTask(id);
+    }
  });
  getAll();

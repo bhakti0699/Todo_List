@@ -40,16 +40,25 @@ table tr td button {
 }
 .completed{text-decoration: line-through;}
 
-.clearable{
-  background:url(http://i.imgur.com/z7ZSYjt.png) no-repeat right -10px center;
-  border:1px solid #999;
-  padding:3px 18px 3px 4px; /* USE the same right padding in jQ! */
-  border-radius:3px;
-  transition: background 0.4s;
+.paging-nav {
+  text-align: right;
+  padding-top: 2px;
 }
-.clearable.x{
-  background-position: right 5px center;
+.paging-nav a{
+  margin: auto 1px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1px 7px;
+  background: #91b9e6;
+  color: white;
+  border-radius: 3px;
 }
-.clearable.onX{
-  cursor:pointer;
+.paging-nav .selected-page{
+  background: #187ed5;
+  font-weight: bold;
+}
+.paging-nav, #addedtasklist {
+  width: 400px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
 }

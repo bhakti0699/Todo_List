@@ -58,7 +58,7 @@ function editTask(id)
     let index = taskVal.findIndex(item => item.id == id);  
     $("#task").val(taskVal[index]['task']);
    // $("#addbtn").css("display","none");
-    $("#savetaskbtn").css("display","block");
+    $("#savetaskbtn, #canceltaskbtn").css("display","block");
     saveTask(taskVal,index);
 }
 function saveTask(taskVal,index)
