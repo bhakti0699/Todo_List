@@ -27,7 +27,7 @@ $(document).on("change",".checked",function()
 })
 $('input[id=task]').focus();
 $("#task").on("input", function(){
-   var regexp = /[^a-zA-Z0-9]/g;
+   var regexp = /[^a-zA-Z0-9 _]/g;
    if($(this).val().match(regexp)){
       $("#error_display").css("display","block");
       $("#error_display").text("only allow the AlphaNumeric");
