@@ -52,6 +52,10 @@ $("#task").on("keypress",function(event)
     let id=$(this).attr('id');
     editTask(id);
  });
+ $(document).on("click","div.form-row button#canceltaskbtn",function(){
+    $("#canceltaskbtn,#savetaskbtn").hide();
+    $("input[id=task]").val('');
+ });
  $(document).on("click","#addedtasklist tbody tr td button.trash",function()
  {
     var result=confirm("Are you sure to delete?");
