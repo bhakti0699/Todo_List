@@ -72,7 +72,6 @@ function saveTask(taskVal,index)
             }
         }
         $("#savetaskbtn, #canceltaskbtn").hide();
-     //   $("#addbtn").css("display","block");
         localStorage.setItem("localTask", JSON.stringify(taskVal));
         getAll();
     });
