@@ -1,5 +1,6 @@
 import {showTask} from './app.js';
 import {Student} from './student.js';
+document.write('<script src="js/paging.js" type="text/javascript"></script>');
 function insert()
 {
     var stud=new Student();
@@ -41,6 +42,9 @@ function getAll()
         taskVal = JSON.parse(task);
     }
     showTask(taskVal);
+    $(document).ready(function() {
+        $('#addedtasklist').paging({limit:5});
+    });
 }
 function deleteTask(id)
 {
